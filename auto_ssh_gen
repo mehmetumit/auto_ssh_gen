@@ -3,7 +3,7 @@
 
 profile_path="$HOME/.bash_profile"
 os="$(uname -s)"
-case $os_name in
+case $os in
 	'Linux')
 		cpy='xclip -selection clipboard'
 		;;
@@ -16,6 +16,6 @@ case $os_name in
 esac
 mkdir -p "$HOME/.ssh"
 ssh-keygen -t rsa -q -f "$HOME/.ssh/ssh_key" -N "" && echo "SSH key pair generated..." || echo "Error while generating ssh key pair!" | exit 1
-cat "$HOME/.ssh/ssh_key.pub" | eval `cpy` && echo "Public key copied to clipboard..." || echo "Error while copying public key to clipboard!" | exit 1
+cat "$HOME/.ssh/ssh_key.pub" | eval `$cpy` && echo "Public key copied to clipboard..." || echo "Error while copying public key to clipboard!" | exit 1
 ssh_command="eval \`ssh-agent\`; ssh-add $HOME/.ssh/ssh_key; fi"
 echo $ssh_command >> $profile_path
