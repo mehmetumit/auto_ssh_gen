@@ -1,4 +1,4 @@
-Automatically generates ssh key and adds to the authentication agent.
+Automatically generates ssh key, adds private key to the authentication agent and copies public key to clipboard
 ## Dependencies
 * `xclip` for **Linux**
 * `clip` for **Windows**
