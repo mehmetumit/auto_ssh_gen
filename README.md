@@ -3,7 +3,7 @@ Automatically generates ssh key and adds to the authentication agent.
 * `xclip` for **Linux**
 * `clip` for **Windows**
 * `pbcopy` for **OS X**
-* `bash` you can change **$profile** for other shells
+* `bash` you can change **$profile_path** for other shells
 ## Installation
 ```sh
 # Clone the repository
