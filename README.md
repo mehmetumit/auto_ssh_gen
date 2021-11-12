@@ -1,3 +1,4 @@
+# auto_ssh_gen
 Automatically generates ssh key, adds private key to the authentication agent and copies public key to clipboard
 ## Dependencies
 * `xclip` for **Linux**
