@@ -4,6 +4,7 @@
 profile_path="$HOME/.bash_profile"
 os="$(uname -s)"
 eval_agent=true
+
 case $os in
 	'Linux')
 		cpy='xclip -selection clipboard'
