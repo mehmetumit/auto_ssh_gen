@@ -1,5 +1,6 @@
-#!/bin/bash
+#!/bin/sh
 #author: Mehmet Ümit Özden
+#You can change profile_path for other shells
 
 profile_path="$HOME/.bash_profile"
 os="$(uname -s)"
@@ -10,7 +11,7 @@ case $os in
 		cpy='xclip -selection clipboard'
 		;;
 	'Darwin')
-		cpy='pbcopy'
+		cpy='pbcopy' && profile_path="$HOME/.zprofile"
 		;;
 		*)
 		cpy='clip'
