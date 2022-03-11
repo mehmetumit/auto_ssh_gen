@@ -20,5 +20,5 @@ esac
 mkdir -p "$HOME/.ssh"
 ssh-keygen -t rsa -q -f "$HOME/.ssh/ssh_key" -N "" && echo 'SSH key pair generated...' || echo 'Error while generating ssh key pair!' | exit 1
 eval "$cpy" < "$HOME/.ssh/ssh_key.pub" && echo 'Public key copied to clipboard...' || echo 'Error while copying public key to clipboard!' | exit 1
-if [ "$eval_agent" = true ]; then ssh_command="eval \`ssh-agent\`; ssh-add $HOME/.ssh/ssh_key"; else ssh_command="ssh-add $HOME/.ssh/ssh_key"; fi
+if [ "$eval_agent" = true ]; then ssh_command="eval \`ssh-agent\`; ssh-add \"$HOME/.ssh/ssh_key\""; else ssh_command="ssh-add \"$HOME/.ssh/ssh_key\""; fi
 echo "$ssh_command" >> "$profile_path"
